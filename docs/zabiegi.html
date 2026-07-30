@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zabiegi - OrthoCare</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen overflow-x-hidden">
+  <!-- Header copied from index.html -->
+  <header id="main-header"></header>
+  
+  
+    <main class="w-full max-w-full overflow-x-hidden py-16">
+    <section class="w-full bg-white relative">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-4xl font-bold text-[#31464b] mb-10 text-center">Zabiegi wykonywane przez lekarzy OrthoCare</h1>
+        
+        <div class="space-y-3" id="zabiegi-accordion">
+          <div class="border border-gray-200 rounded-2xl overflow-hidden">
+            <button onclick="toggleZabieg('zabieg-0')" class="w-full flex items-center justify-between p-5 text-left bg-white hover:bg-gray-50 transition-colors duration-200">
+              <span class="text-lg font-semibold text-gray-800">Artroskopia (staw kolanowy, biodrowy, nadgarstek)</span>
+              <svg id="icon-zabieg-0" class="w-5 h-5 text-[#B4CBD1] transform transition-transform duration-300 flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div id="content-zabieg-0" class="hidden px-5 pb-5">
+              <div class="border-t border-gray-100 pt-4">
+                <p class="text-gray-700 leading-relaxed">Małoinwazyjna procedura diagnostyczno-lecznicza wykonywana przy użyciu artroskopu. Pozwala ocenić i jednocześnie leczyć zmiany w stawie – m.in. uszkodzenia łąkotek, chrząstki, więzadeł czy błony maziowej.</p>
+              </div>
+            </div>
+          </div>
+          <div class="border border-gray-200 rounded-2xl overflow-hidden">
+            <button onclick="toggleZabieg('zabieg-1')" class="w-full flex items-center justify-between p-5 text-left bg-white hover:bg-gray-50 transition-colors duration-200">
+              <span class="text-lg font-semibold text-gray-800">Rekonstrukcja więzadła krzyżowego przedniego (ACL)</span>
+              <svg id="icon-zabieg-1" class="w-5 h-5 text-[#B4CBD1] transform transition-transform duration-300 flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div id="content-zabieg-1" class="hidden px-5 pb-5">
+              <div class="border-t border-gray-100 pt-4">
+                <p class="text-gray-700 leading-relaxed">Zabieg odtwarzający stabilność kolana po jego uszkodzeniu, najczęściej w wyniku urazu sportowego. Polega na wszczepieniu nowego przeszczepu więzadła.</p>
+              </div>
+            </div>
+          </div>
+          <div class="border border-gray-200 rounded-2xl overflow-hidden">
+            <button onclick="toggleZabieg('zabieg-2')" class="w-full flex items-center justify-between p-5 text-left bg-white hover:bg-gray-50 transition-colors duration-200">
+              <span class="text-lg font-semibold text-gray-800">Szycie łąkotek</span>
+              <svg id="icon-zabieg-2" class="w-5 h-5 text-[#B4CBD1] transform transition-transform duration-300 flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div id="content-zabieg-2" class="hidden px-5 pb-5">
+              <div class="border-t border-gray-100 pt-4">
+                <p class="text-gray-700 leading-relaxed">Zabieg pozwalający na zachowanie i regenerację uszkodzonej łąkotki w kolanie. Wykonywany artroskopowo, głównie u młodych i aktywnych pacjentów.</p>
+              </div>
+            </div>
+          </div>
+          <div class="border border-gray-200 rounded-2xl overflow-hidden">
+            <button onclick="toggleZabieg('zabieg-3')" class="w-full flex items-center justify-between p-5 text-left bg-white hover:bg-gray-50 transition-colors duration-200">
+              <span class="text-lg font-semibold text-gray-800">Endoprotezoplastyka stawu biodrowego i kolanowego (jednoprzedziałowa / pełna)</span>
+              <svg id="icon-zabieg-3" class="w-5 h-5 text-[#B4CBD1] transform transition-transform duration-300 flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div id="content-zabieg-3" class="hidden px-5 pb-5">
+              <div class="border-t border-gray-100 pt-4">
+                <p class="text-gray-700 leading-relaxed">Zabieg chirurgiczny polegający na wymianie uszkodzonych elementów stawu na sztuczne implanty (endoprotezy). Przeprowadzany w zaawansowanych zmianach zwyrodnieniowych, w celu zniesienia bólu, przywrócenia ruchomości i poprawy komfortu życia pacjenta.</p>
+              </div>
+            </div>
+          </div>
+          <div class="border border-gray-200 rounded-2xl overflow-hidden">
+            <button onclick="toggleZabieg('zabieg-4')" class="w-full flex items-center justify-between p-5 text-left bg-white hover:bg-gray-50 transition-colors duration-200">
+              <span class="text-lg font-semibold text-gray-800">Kapoplastyka</span>
+              <svg id="icon-zabieg-4" class="w-5 h-5 text-[#B4CBD1] transform transition-transform duration-300 flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div id="content-zabieg-4" class="hidden px-5 pb-5">
+              <div class="border-t border-gray-100 pt-4">
+                <p class="text-gray-700 leading-relaxed">Alternatywa dla endoprotezy biodra – zabieg polegający na pokryciu powierzchni stawowej głowy kości udowej metalowym elementem, przy zachowaniu naturalnych struktur.</p>
+              </div>
+            </div>
+          </div>
+          <div class="border border-gray-200 rounded-2xl overflow-hidden">
+            <button onclick="toggleZabieg('zabieg-5')" class="w-full flex items-center justify-between p-5 text-left bg-white hover:bg-gray-50 transition-colors duration-200">
+              <span class="text-lg font-semibold text-gray-800">Leczenie przepukliny krążka międzykręgowego (discektomia)</span>
+              <svg id="icon-zabieg-5" class="w-5 h-5 text-[#B4CBD1] transform transition-transform duration-300 flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div id="content-zabieg-5" class="hidden px-5 pb-5">
+              <div class="border-t border-gray-100 pt-4">
+                <p class="text-gray-700 leading-relaxed">Zabieg chirurgiczny mający na celu usunięcie fragmentu dysku uciskającego struktury nerwowe. Stosowany w przypadku nasilonych dolegliwości bólowych kręgosłupa oraz objawów neurologicznych wynikających z ucisku na korzenie nerwowe. Pomaga przywrócić komfort życia i sprawność ruchową.</p>
+              </div>
+            </div>
+          </div>
+          <div class="border border-gray-200 rounded-2xl overflow-hidden">
+            <button onclick="toggleZabieg('zabieg-6')" class="w-full flex items-center justify-between p-5 text-left bg-white hover:bg-gray-50 transition-colors duration-200">
+              <span class="text-lg font-semibold text-gray-800">Stabilizacja kręgosłupa</span>
+              <svg id="icon-zabieg-6" class="w-5 h-5 text-[#B4CBD1] transform transition-transform duration-300 flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div id="content-zabieg-6" class="hidden px-5 pb-5">
+              <div class="border-t border-gray-100 pt-4">
+                <p class="text-gray-700 leading-relaxed">Zabieg chirurgiczny stosowany przy niestabilnościach, zwyrodnieniach lub urazach kręgosłupa. Polega na zespoleniu wybranych segmentów, aby przywrócić im stabilność.</p>
+              </div>
+            </div>
+          </div>
+          <div class="border border-gray-200 rounded-2xl overflow-hidden">
+            <button onclick="toggleZabieg('zabieg-7')" class="w-full flex items-center justify-between p-5 text-left bg-white hover:bg-gray-50 transition-colors duration-200">
+              <span class="text-lg font-semibold text-gray-800">Kriolezja (staw kolanowy, bark, kręgosłup)</span>
+              <svg id="icon-zabieg-7" class="w-5 h-5 text-[#B4CBD1] transform transition-transform duration-300 flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div id="content-zabieg-7" class="hidden px-5 pb-5">
+              <div class="border-t border-gray-100 pt-4">
+                <p class="text-gray-700 leading-relaxed">Metoda leczenia bólu przewlekłego poprzez zamrażanie nerwów przewodzących ból. Zabieg wykonywany pod kontrolą USG, skuteczny m.in. w chorobie zwyrodnieniowej czy po operacjach.</p>
+              </div>
+            </div>
+          </div>
+          <div class="border border-gray-200 rounded-2xl overflow-hidden">
+            <button onclick="toggleZabieg('zabieg-8')" class="w-full flex items-center justify-between p-5 text-left bg-white hover:bg-gray-50 transition-colors duration-200">
+              <span class="text-lg font-semibold text-gray-800">Zabiegi na paluchu: paluch koślawy (hallux valgus), paluch sztywny (hallux rigidus)</span>
+              <svg id="icon-zabieg-8" class="w-5 h-5 text-[#B4CBD1] transform transition-transform duration-300 flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div id="content-zabieg-8" class="hidden px-5 pb-5">
+              <div class="border-t border-gray-100 pt-4">
+                <p class="text-gray-700 leading-relaxed">Zabiegi operacyjne korekcyjne, które przywracają prawidłowe ustawienie palucha, poprawiają jego funkcję i eliminują ból.</p>
+              </div>
+            </div>
+          </div>
+          <div class="border border-gray-200 rounded-2xl overflow-hidden">
+            <button onclick="toggleZabieg('zabieg-9')" class="w-full flex items-center justify-between p-5 text-left bg-white hover:bg-gray-50 transition-colors duration-200">
+              <span class="text-lg font-semibold text-gray-800">Palce młotkowate</span>
+              <svg id="icon-zabieg-9" class="w-5 h-5 text-[#B4CBD1] transform transition-transform duration-300 flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div id="content-zabieg-9" class="hidden px-5 pb-5">
+              <div class="border-t border-gray-100 pt-4">
+                <p class="text-gray-700 leading-relaxed">Chirurgiczna korekcja deformacji palców stopy, najczęściej drugiego lub trzeciego, które są zgięte w stawie środkowym. Zabieg poprawia komfort chodzenia i estetykę stopy.</p>
+              </div>
+            </div>
+          </div>
+          <div class="border border-gray-200 rounded-2xl overflow-hidden">
+            <button onclick="toggleZabieg('zabieg-10')" class="w-full flex items-center justify-between p-5 text-left bg-white hover:bg-gray-50 transition-colors duration-200">
+              <span class="text-lg font-semibold text-gray-800">Rekonstrukcje uszkodzonych ścięgien</span>
+              <svg id="icon-zabieg-10" class="w-5 h-5 text-[#B4CBD1] transform transition-transform duration-300 flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div id="content-zabieg-10" class="hidden px-5 pb-5">
+              <div class="border-t border-gray-100 pt-4">
+                <p class="text-gray-700 leading-relaxed">Odtworzenie przerwanego lub niewydolnego ścięgna w obrębie kończyn – ręki, przedramienia, stopy czy łydki. Zabieg przywraca funkcję i siłę mięśni.</p>
+              </div>
+            </div>
+          </div>
+          <div class="border border-gray-200 rounded-2xl overflow-hidden">
+            <button onclick="toggleZabieg('zabieg-11')" class="w-full flex items-center justify-between p-5 text-left bg-white hover:bg-gray-50 transition-colors duration-200">
+              <span class="text-lg font-semibold text-gray-800">Rekonstrukcja zginaczy i prostowników palców</span>
+              <svg id="icon-zabieg-11" class="w-5 h-5 text-[#B4CBD1] transform transition-transform duration-300 flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div id="content-zabieg-11" class="hidden px-5 pb-5">
+              <div class="border-t border-gray-100 pt-4">
+                <p class="text-gray-700 leading-relaxed">Zabieg polegający na chirurgicznym odtworzeniu funkcji uszkodzonych ścięgien w obrębie dłoni. Stosowany m.in. po urazach ciętych lub przeciążeniowych.</p>
+              </div>
+            </div>
+          </div>
+          <div class="border border-gray-200 rounded-2xl overflow-hidden">
+            <button onclick="toggleZabieg('zabieg-12')" class="w-full flex items-center justify-between p-5 text-left bg-white hover:bg-gray-50 transition-colors duration-200">
+              <span class="text-lg font-semibold text-gray-800">Cieśń nadgarstka</span>
+              <svg id="icon-zabieg-12" class="w-5 h-5 text-[#B4CBD1] transform transition-transform duration-300 flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div id="content-zabieg-12" class="hidden px-5 pb-5">
+              <div class="border-t border-gray-100 pt-4">
+                <p class="text-gray-700 leading-relaxed">Zabieg odbarczający nerw pośrodkowy w kanale nadgarstka, stosowany w leczeniu zespołu cieśni nadgarstka – jednej z najczęstszych neuropatii uciskowych.</p>
+              </div>
+            </div>
+          </div>
+          <div class="border border-gray-200 rounded-2xl overflow-hidden">
+            <button onclick="toggleZabieg('zabieg-13')" class="w-full flex items-center justify-between p-5 text-left bg-white hover:bg-gray-50 transition-colors duration-200">
+              <span class="text-lg font-semibold text-gray-800">Zespół Dupuytrena</span>
+              <svg id="icon-zabieg-13" class="w-5 h-5 text-[#B4CBD1] transform transition-transform duration-300 flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div id="content-zabieg-13" class="hidden px-5 pb-5">
+              <div class="border-t border-gray-100 pt-4">
+                <p class="text-gray-700 leading-relaxed">Choroba prowadząca do przykurczu palców wskutek zgrubienia i skracania powięzi dłoniowej. Zabieg chirurgiczny przywraca funkcję ręki.</p>
+              </div>
+            </div>
+          </div>
+          <div class="border border-gray-200 rounded-2xl overflow-hidden">
+            <button onclick="toggleZabieg('zabieg-14')" class="w-full flex items-center justify-between p-5 text-left bg-white hover:bg-gray-50 transition-colors duration-200">
+              <span class="text-lg font-semibold text-gray-800">Palec zatrzaskujący (trzaskający)</span>
+              <svg id="icon-zabieg-14" class="w-5 h-5 text-[#B4CBD1] transform transition-transform duration-300 flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div id="content-zabieg-14" class="hidden px-5 pb-5">
+              <div class="border-t border-gray-100 pt-4">
+                <p class="text-gray-700 leading-relaxed">Leczenie polega na uwolnieniu pochewki ścięgna zginacza, która blokuje płynny ruch palca. Zabieg przeprowadzany jest szybko, często w znieczuleniu miejscowym.</p>
+              </div>
+            </div>
+          </div>
+          <div class="border border-gray-200 rounded-2xl overflow-hidden">
+            <button onclick="toggleZabieg('zabieg-15')" class="w-full flex items-center justify-between p-5 text-left bg-white hover:bg-gray-50 transition-colors duration-200">
+              <span class="text-lg font-semibold text-gray-800">Uwolnienie nerwu łokciowego</span>
+              <svg id="icon-zabieg-15" class="w-5 h-5 text-[#B4CBD1] transform transition-transform duration-300 flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div id="content-zabieg-15" class="hidden px-5 pb-5">
+              <div class="border-t border-gray-100 pt-4">
+                <p class="text-gray-700 leading-relaxed">Zabieg mający na celu zmniejszenie ucisku na nerw łokciowy w rowku nadgarstka lub przy łokciu. Wskazany w przypadku drętwienia, osłabienia siły i postępującego zaniku mięśni ręki.</p>
+              </div>
+            </div>
+          </div>
+          <div class="border border-gray-200 rounded-2xl overflow-hidden">
+            <button onclick="toggleZabieg('zabieg-16')" class="w-full flex items-center justify-between p-5 text-left bg-white hover:bg-gray-50 transition-colors duration-200">
+              <span class="text-lg font-semibold text-gray-800">Zabiegi korekcyjne w przebiegu skolioz</span>
+              <svg id="icon-zabieg-16" class="w-5 h-5 text-[#B4CBD1] transform transition-transform duration-300 flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div id="content-zabieg-16" class="hidden px-5 pb-5">
+              <div class="border-t border-gray-100 pt-4">
+                <p class="text-gray-700 leading-relaxed">Zabiegi chirurgiczne mające na celu zahamowanie progresji skrzywienia kręgosłupa i poprawę osi ciała. Wskazane w przypadku zaawansowanych deformacji u dzieci powyżej 10 roku życia i dorosłych.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ważne informacje -->
+        <div class="mt-12">
+          <div class="bg-[#f0f7f9] rounded-2xl p-8">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Ważne informacje</h3>
+            <ul class="text-gray-700 space-y-2 text-sm leading-relaxed">
+              <li>• Wszystkie zabiegi wykonywane są przez doświadczonych specjalistów Kliniki OrthoCare.</li>
+              <li>• Procedury przeprowadzane są w ramach kontraktu z Narodowym Funduszem Zdrowia (NFZ) lub prywatnie.</li>
+              <li>• Zabiegi realizowane są w renomowanych placówkach:
+                <ul class="list-disc pl-6 mt-2">
+                  <li>Nowy Powiatowy Szpital w Pionkach</li>
+                  <li>Samodzielny Publiczny Szpital Kliniczny nr 4 w Lublinie (SPSK 4)</li>
+                  <li>Szpital Czerniakowski w Warszawie</li>
+                  <li>Samodzielny Zakład Opieki Zdrowotnej w Kraśniku</li>
+                </ul>
+              </li>
+              <li>• Szczegółowe informacje dotyczące kwalifikacji do zabiegu oraz miejsca jego wykonania omawiane są indywidualnie podczas konsultacji lekarskiej.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="main-footer"></footer>
+  
+  <script src="js/main.js"></script>
+  <script>
+    function toggleZabieg(id) {
+      const content = document.getElementById('content-' + id);
+      const icon = document.getElementById('icon-' + id);
+      const isHidden = content.classList.contains('hidden');
+      
+      // Close all others
+      document.querySelectorAll('[id^="content-zabieg"]').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('[id^="icon-zabieg"]').forEach(el => el.classList.remove('rotate-180'));
+      
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      }
+    }
+    
+    fetch('index.html').then(r=>r.text()).then(html=>{
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      document.getElementById('main-header').innerHTML = doc.querySelector('header').outerHTML;
+      document.getElementById('main-footer').innerHTML = doc.querySelector('footer').outerHTML;
+    });
+  </script>
+</body>
+</html>

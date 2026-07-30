@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{margin:0;font:20px sans-serif}
+#w::before{content:"innerWidth=" attr(data-w) " matchMedia767=" attr(data-m)}
+.box{width:100vw;height:40px;background:red}
+@media (max-width:767px){.box{background:lime}}
+.title{font-size:12px !important}
+@media (min-width:768px){.title{font-size:40px !important;white-space:nowrap}}
+</style></head>
+<body>
+<div class="box"></div>
+<h2 class="title">Poznaj MediCare – Twój nowy standard opieki medycznej w Radomiu</h2>
+<div id="w"></div>
+<script>
+document.getElementById('w').dataset.w=window.innerWidth;
+document.getElementById('w').dataset.m=window.matchMedia('(max-width:767px)').matches;
+document.title=window.innerWidth+':'+(window.matchMedia('(max-width:767px)').matches);
+</script>
+</body></html>

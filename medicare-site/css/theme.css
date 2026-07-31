@@ -1741,9 +1741,11 @@ a.kontakt-list__value:hover { color: var(--mocha); }
   display: block;
   margin-top: 0.42em;
   font-weight: 500;
+  font-style: italic;
   letter-spacing: .02em;
-  color: var(--navy);
-  opacity: .88;
+  color: var(--brown);
+  opacity: 1;
+  white-space: nowrap;
 }
 .krio-hero__lead {
   font-size:calc(1.11rem + 1px);

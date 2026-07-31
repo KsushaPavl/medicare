@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poradnie – MediCare Radom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="css/theme.css?v=227" rel="stylesheet">
+  <link href="css/legacy.css?v=61" rel="stylesheet">
+  <link href="dist/output.css?v=33" rel="stylesheet">
+</head>
+<body>
+<header id="site-header">
+<nav class="nav">
+  <div class="nav__wrap">
+    <a href="index.html" class="nav__logo">
+      <img src="assets/logo.png" alt="Przychodnia MediCare" width="210" height="46" decoding="async" />
+    </a>
+    <ul class="nav__links" id="navLinks">
+        <li><a href="przychodnia.html">O nas</a></li>
+        <li><a href="poradnie.html" class="is-active">Poradnie</a></li>
+        <li><a href="cennik.html">Usługi i cennik</a></li>
+        <li><a href="blefaroplastyka.html">Blefaroplastyka</a></li>
+        <li><a href="poradnia-leczenia-ran.html">Poradnia Leczenia Ran</a></li>
+    </ul>
+    <div class="nav__actions">
+      <div class="nav__social">
+        <a href="https://www.instagram.com/przychodnia_medicare/" target="_blank" rel="noopener noreferrer" class="nav-social-btn" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="https://www.facebook.com/profile.php?id=61579875898421" target="_blank" rel="noopener noreferrer" class="nav-social-btn" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+      </div>
+      <a href="kontakt.html" class="nav__btn-kontakt">Kontakt</a>
+      <button type="button" class="nav__btn-rezerwuj umow-wizyte-btn">Um&oacute;w wizytę</button>
+    </div>
+    <button class="nav__hamburger" id="menuBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav__mobile" id="mobileMenu">
+    <a href="przychodnia.html">O nas</a>
+    <a href="poradnie.html" class="is-active">Poradnie</a>
+    <a href="cennik.html">Usługi i cennik</a>
+    <a href="blefaroplastyka.html">Blefaroplastyka</a>
+    <a href="poradnia-leczenia-ran.html">Poradnia Leczenia Ran</a>
+    <a href="kontakt.html">Kontakt</a>
+    <div class="nav-cta-wrap">
+      <button type="button" class="btn btn--primary umow-wizyte-btn" style="width:100%">Um&oacute;w wizytę</button>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main>
+<div class="page-section__head">
+  <div class="wrap-inner">
+    <h1 class="page-title">Poradnie</h1>
+  </div>
+</div>
+<div class="page-section__body">
+  <div class="wrap-inner legacy-content">
+    <div id="ortopedia" class="poradnia-anchor" tabindex="-1"></div>
+    <div class="poradnie-grid">
+      <article class="poradnia-card" id="chirurgia">
+        <div class="poradnia-card__body">
+          <h2 class="poradnia-card__title">Poradnia Chirurgii Og&oacute;lnej i Proktologii</h2>
+          <p class="poradnia-card__text">Kompleksowa diagnostyka i nowoczesne, małoinwazyjne leczenie. Konsultacje chirurgiczne, badania dermatoskopowe, bezbolesne usuwanie znamion oraz skuteczna pomoc w chorobach końcowego odcinka przewodu pokarmowego. Zabiegi wykonujemy bezpiecznie na miejscu.</p>
+          <div class="poradnia-card__doctors">
+            <div class="poradnia-doc">
+              <img src="assets/dr-kluska.png" alt="Dr n. med. Piotr Kluska" class="poradnia-doc__photo">
+              <div><p class="poradnia-doc__name">Dr n. med. Piotr Kluska</p><p class="poradnia-doc__spec">specjalista chirurgii og&oacute;lnej, proktolog</p></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="poradnia-card" id="leczenie-ran">
+        <div class="poradnia-card__body">
+          <h2 class="poradnia-card__title">Poradnia Leczenia Ran</h2>
+          <p class="poradnia-card__text">Dedykowane terapie dla pacjent&oacute;w z ranami przewlekłymi, owrzodzeniami podudzi czy zespołem stopy cukrzycowej. Stosujemy nowoczesne opatrunki, sprzęty i procedury przyspieszające gojenie.</p>
+          <div class="poradnia-card__doctors">
+            <div class="poradnia-doc">
+              <img src="assets/dr-szymanska.png" alt="Dr n. o zdr. Paulina Szymańska" class="poradnia-doc__photo">
+              <div><p class="poradnia-doc__name">Dr n. o zdr. Paulina Szymańska</p><p class="poradnia-doc__spec">specjalista leczenia ran</p></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="poradnia-card" id="psychiatria">
+        <div class="poradnia-card__body">
+          <h2 class="poradnia-card__title">Poradnia Zdrowia Psychicznego</h2>
+          <p class="poradnia-card__text">Pełne empatii wsparcie w zakresie zdrowia psychicznego. Profesjonalna diagnostyka i nowoczesne leczenie dopasowane do indywidualnych potrzeb.</p>
+          <div class="poradnia-card__doctors">
+            <div class="poradnia-doc">
+              <div class="doc-avatar poradnia-doc__avatar">TG</div>
+              <div><p class="poradnia-doc__name">Lek. Tomasz Golański</p><p class="poradnia-doc__spec">specjalista psychiatrii</p></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="poradnia-card">
+        <div class="poradnia-card__body">
+          <h2 class="poradnia-card__title">Poradnia Chirurgii Plastycznej (Blefaroplastyka)</h2>
+          <p class="poradnia-card__text">Chirurgiczna plastyka powiek w znieczuleniu miejscowym. Zabieg usuwa nadmiar sk&oacute;ry, poprawiając pole widzenia i przywracając twarzy młody wygląd.</p>
+          <div class="poradnia-card__doctors">
+            <div class="poradnia-doc">
+              <div class="doc-avatar poradnia-doc__avatar">RP</div>
+              <div><p class="poradnia-doc__name">Lek. Raman Paulouski</p><p class="poradnia-doc__spec">chirurg</p></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="poradnia-card" id="kardiologia">
+        <div class="poradnia-card__body">
+          <h2 class="poradnia-card__title">Poradnia Kardiologiczna</h2>
+          <p class="poradnia-card__text">Profilaktyka, diagnostyka i leczenie chor&oacute;b układu krążenia, zaburzeń rytmu serca oraz nadciśnienia. Kompleksowa ocena stanu serca i badania diagnostyczne na miejscu.</p>
+          <div class="poradnia-card__doctors">
+            <div class="poradnia-doc">
+              <img src="assets/dr-slodka.png" alt="Lek. Eliza Słodka" class="poradnia-doc__photo">
+              <div><p class="poradnia-doc__name">Lek. Eliza Słodka</p><p class="poradnia-doc__spec">specjalista kardiologii, specjalista chor&oacute;b wewnętrznych</p></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="poradnia-card">
+        <div class="poradnia-card__body">
+          <h2 class="poradnia-card__title">Poradnia Chirurgii Naczyniowej</h2>
+          <p class="poradnia-card__text">Diagnostyka układu krążenia na bazie badań USG Doppler. Nowoczesne leczenie żylak&oacute;w, przewlekłej niewydolności żylnej oraz schorzeń tętnic.</p>
+          <div class="poradnia-card__doctors">
+            <div class="poradnia-doc">
+              <img src="assets/dr-kapolka.png" alt="Lek. Robert Kapołka" class="poradnia-doc__photo">
+              <div><p class="poradnia-doc__name">Lek. Robert Kapołka</p><p class="poradnia-doc__spec">specjalista chirurgii naczyniowej</p></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="poradnia-card" id="urologia">
+        <div class="poradnia-card__body">
+          <h2 class="poradnia-card__title">Poradnia Urologiczna</h2>
+          <p class="poradnia-card__text">Kompleksowa pomoc w schorzeniach układu moczowo-płciowego. Szybkie wdrożenie leczenia z natychmiastową diagnostyką USG podczas wizyty.</p>
+          <div class="poradnia-card__doctors">
+            <div class="poradnia-doc">
+              <img src="assets/dr-ostrach.png" alt="Lek. Mikołaj Ostrach" class="poradnia-doc__photo">
+              <div><p class="poradnia-doc__name">Lek. Mikołaj Ostrach</p><p class="poradnia-doc__spec">specjalista urologii</p></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="poradnia-card">
+        <div class="poradnia-card__body">
+          <h2 class="poradnia-card__title">Poradnia Nefrologiczna</h2>
+          <p class="poradnia-card__text">Opieka w zakresie chor&oacute;b nerek &ndash; od stan&oacute;w ostrych po przewlekłe niewydolności. Nefrolog ściśle wsp&oacute;łpracuje z kardiologiem i urologiem.</p>
+          <div class="poradnia-card__doctors">
+            <div class="poradnia-doc">
+              <img src="assets/dr-skorka.png" alt="Lek. Łukasz Skórka" class="poradnia-doc__photo">
+              <div><p class="poradnia-doc__name">Lek. Łukasz Sk&oacute;rka</p><p class="poradnia-doc__spec">specjalista nefrologii, specjalista chor&oacute;b wewnętrznych</p></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="poradnia-card" id="neurologia">
+        <div class="poradnia-card__body">
+          <h2 class="poradnia-card__title">Poradnia Neurologiczna</h2>
+          <p class="poradnia-card__text">Diagnostyka i leczenie schorzeń układu nerwowego, migren, zawrot&oacute;w głowy oraz b&oacute;l&oacute;w kręgosłupa. W trudnych przypadkach zapewniamy wielodyscyplinarną konsultację z OrthoCare.</p>
+          <div class="poradnia-card__doctors">
+            <div class="poradnia-doc">
+              <div class="doc-avatar poradnia-doc__avatar">AN</div>
+              <div><p class="poradnia-doc__name">Lek. Anna Narożnik</p><p class="poradnia-doc__spec">specjalista neurologii</p></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="poradnia-card">
+        <div class="poradnia-card__body">
+          <h2 class="poradnia-card__title">Poradnia Reumatologiczna</h2>
+          <p class="poradnia-card__text">Diagnozowanie i leczenie chor&oacute;b zapalnych oraz zwyrodnieniowych staw&oacute;w. Skuteczne wygaszenie b&oacute;lu z pełną opieką nad narządem ruchu.</p>
+          <div class="poradnia-card__doctors">
+            <div class="poradnia-doc">
+              <img src="assets/dr-skwarek-szewczyk.png" alt="Lek. Agata Skwarek-Szewczyk" class="poradnia-doc__photo">
+              <div><p class="poradnia-doc__name">Lek. Agata Skwarek-Szewczyk</p><p class="poradnia-doc__spec">specjalista reumatologii, specjalista chor&oacute;b wewnętrznych</p></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="poradnia-card" id="laryngologia">
+        <div class="poradnia-card__body">
+          <h2 class="poradnia-card__title">Poradnia Otolaryngologiczna</h2>
+          <p class="poradnia-card__text">Kompleksowe badanie i leczenie chor&oacute;b uszu, nosa, gardła oraz krtani u dorosłych i dzieci. Dwuosobowy zesp&oacute;ł specjalist&oacute;w z diagnostyką na miejscu.</p>
+          <div class="poradnia-card__doctors">
+            <div class="poradnia-doc">
+              <div class="doc-avatar poradnia-doc__avatar">PZ</div>
+              <div><p class="poradnia-doc__name">Dr n. med. Paulina Zarębska-Karpieszuk</p><p class="poradnia-doc__spec">specjalista otolaryngologii</p></div>
+            </div>
+            <div class="poradnia-doc">
+              <img src="assets/dr-rogozik.png" alt="Lek. Wojciech Rogozik" class="poradnia-doc__photo">
+              <div><p class="poradnia-doc__name">Lek. Wojciech Rogozik</p><p class="poradnia-doc__spec">specjalista otolaryngologii</p></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="poradnia-card">
+        <div class="poradnia-card__body">
+          <h2 class="poradnia-card__title">Poradnia Chor&oacute;b Wewnętrznych (Interna)</h2>
+          <p class="poradnia-card__text">Kompleksowa profilaktyka, diagnostyka i leczenie schorzeń narząd&oacute;w wewnętrznych. Holistyczne spojrzenie na zdrowie i koordynacja leczenia u lekarzy innych specjalizacji.</p>
+          <div class="poradnia-card__doctors">
+            <div class="poradnia-doc">
+              <img src="assets/dr-skwarek-szewczyk.png" alt="Lek. Agata Skwarek-Szewczyk" class="poradnia-doc__photo">
+              <div><p class="poradnia-doc__name">Lek. Agata Skwarek-Szewczyk</p><p class="poradnia-doc__spec">specjalista reumatologii, specjalista chor&oacute;b wewnętrznych</p></div>
+            </div>
+            <div class="poradnia-doc">
+              <img src="assets/dr-skorka.png" alt="Lek. Łukasz Skórka" class="poradnia-doc__photo">
+              <div><p class="poradnia-doc__name">Lek. Łukasz Sk&oacute;rka</p><p class="poradnia-doc__spec">specjalista nefrologii, specjalista chor&oacute;b wewnętrznych</p></div>
+            </div>
+            <div class="poradnia-doc">
+              <img src="assets/dr-slodka.png" alt="Lek. Eliza Słodka" class="poradnia-doc__photo">
+              <div><p class="poradnia-doc__name">Lek. Eliza Słodka</p><p class="poradnia-doc__spec">specjalista kardiologii, specjalista chor&oacute;b wewnętrznych</p></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</div>
+</main>
+
+<footer class="footer-dark">
+  <div class="footer-dark__top">
+    <div class="wrap">
+      <div class="footer-dark__grid">
+        <div class="footer-dark__brand">
+          <img src="assets/logo-white.png" alt="MediCare" class="footer-dark__logo" loading="lazy" decoding="async" width="240" height="96" />
+          <p class="footer-dark__tagline">Wielospecjalistyczna opieka medyczna w Radomiu. Łączymy nowoczesną technologię i specjalistyczną wiedzę z ludzkim, pełnym empatii podejściem.</p>
+          <div class="footer-dark__social">
+            <a href="https://www.facebook.com/profile.php?id=61579875898421" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook">fb</a>
+            <a href="https://www.instagram.com/przychodnia_medicare/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram">ig</a>
+          </div>
+        </div>
+        <div class="footer-dark__col">
+          <p class="footer-dark__heading">Nawigacja</p>
+          <ul class="footer-dark__list">
+            <li><a href="przychodnia.html">O nas</a></li>
+            <li><a href="poradnie.html">Poradnie</a></li>
+            <li><a href="cennik.html">Usługi i cennik</a></li>
+            <li><a href="blefaroplastyka.html">Blefaroplastyka</a></li>
+            <li><a href="poradnia-leczenia-ran.html">Poradnia Leczenia Ran</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-dark__bottom">
+    <div class="wrap">
+      <span>&copy; 2026 Przychodnia MediCare. Wszelkie prawa zastrzeżone.</span>
+      <span>ul. Dębowa 2, 26-600 Radom | <a href="tel:889834936">889 834 936</a></span>
+    </div>
+  </div>
+</footer>
+
+<div id="booking-modal" class="booking-modal hidden">
+  <div class="booking-modal__panel">
+    <button id="close-modal" type="button" class="booking-modal__close" aria-label="Zamknij">
+      <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    <div class="booking-modal__body">
+      <h2 class="heading booking-modal__title">Um&oacute;w wizytę w MediCare</h2>
+      <div class="booking-modal__widget">
+        <a class="zl-facility-url" href="https://www.znanylekarz.pl/placowki/przychodnia-medicare-3" rel="nofollow" data-zlw-facility="przychodnia-medicare-3" data-zlw-type="facility-big" data-zlw-saas-only="true" data-zlw-a11y-title="Widget um&oacute;wienia wizyty lekarskiej">Przychodnia MediCare</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>!function($_x,_s,id){var js,fjs=$_x.getElementsByTagName(_s)[0];if(!$_x.getElementById(id)){js=$_x.createElement(_s);js.id=id;js.src="//platform.docplanner.com/js/widget.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","zl-widget-s");</script>
+<script src="js/main.js?v=130" defer></script>
+</body>
+</html>

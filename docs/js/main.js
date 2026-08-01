@@ -393,14 +393,20 @@ function initPracticeCardsCarousel() {
         return;
     }
     const cards = Array.from(track.children).filter(function (el) {
-        return el.classList.contains('card3');
+        return el.classList.contains('feature-card') || el.classList.contains('card3');
     });
     if (cards.length === 0) {
         return;
     }
 
+    function gapSize() {
+        var styles = window.getComputedStyle(track);
+        var gap = parseFloat(styles.columnGap || styles.gap);
+        return Number.isFinite(gap) ? gap : 16;
+    }
+
     function activeIndex() {
-        const cardWidth = cards[0].offsetWidth + 16;
+        var cardWidth = cards[0].offsetWidth + gapSize();
         if (!cardWidth) {
             return 0;
         }

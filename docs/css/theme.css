@@ -2189,7 +2189,7 @@ a.kontakt-list__value:hover { color: var(--mocha); }
   .krio-hero--split {
     grid-template-columns: 1fr;
     gap: 20px;
-    padding: 40px 20px 0;
+    padding: 40px 12px 0;
     min-height: 0;
     width: 100%;
     max-width: 100%;
@@ -2263,6 +2263,15 @@ a.kontakt-list__value:hover { color: var(--mocha); }
   .krio-heading--center {
     text-align: left;
   }
+  .krio-section--stone,
+  .krio-tech-section {
+    padding-inline: 0;
+  }
+  .krio-section__inner,
+  .krio-section__inner--wide,
+  .krio-section__inner--narrow {
+    padding-inline: 12px;
+  }
   .krio-hero--split .krio-hero__content .btn {
     display: flex;
     width: fit-content;
@@ -2280,10 +2289,10 @@ a.kontakt-list__value:hover { color: var(--mocha); }
   .krio-hero--split .krio-hero__photo {
     order: 1;
     min-height: 0;
-    width: calc(100% + 40px);
+    width: calc(100% + 24px);
     max-width: none;
-    margin-left: -20px;
-    margin-right: -20px;
+    margin-left: -12px;
+    margin-right: -12px;
     overflow: hidden;
     justify-content: center;
   }
@@ -2572,7 +2581,7 @@ a.kontakt-list__value:hover { color: var(--mocha); }
   .krio-section__inner,
   .krio-section__inner--wide,
   .krio-section__inner--narrow {
-    padding-inline: 20px;
+    padding-inline: 12px;
   }
 }
 
@@ -2660,7 +2669,7 @@ a.kontakt-list__value:hover { color: var(--mocha); }
     padding: 20px;
   }
   .krio-hero--split {
-    padding: 32px 16px 0;
+    padding: 32px 12px 0;
     gap: 16px;
   }
   .krio-page .krio-hero.krio-hero--split {
@@ -2676,12 +2685,12 @@ a.kontakt-list__value:hover { color: var(--mocha); }
   .krio-section__inner,
   .krio-section__inner--wide,
   .krio-section__inner--narrow {
-    padding-inline: 16px;
+    padding-inline: 12px;
   }
   .krio-hero--split .krio-hero__photo {
-    width: calc(100% + 32px);
-    margin-left: -16px;
-    margin-right: -16px;
+    width: calc(100% + 24px);
+    margin-left: -12px;
+    margin-right: -12px;
     margin-bottom: 0;
     min-height: 0;
     height: auto;
@@ -2696,10 +2705,10 @@ a.kontakt-list__value:hover { color: var(--mocha); }
     min-height: 220px;
   }
   .krio-section--stone {
-    padding-inline: 16px;
+    padding-inline: 0;
   }
   .krio-tech-section {
-    padding-inline: 16px;
+    padding-inline: 0;
   }
   .krio-heading {
     font-size: clamp(calc(1.4rem + 1px), 5.5vw, calc(1.85rem + 1px));

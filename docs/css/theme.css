@@ -1728,7 +1728,7 @@ a.kontakt-list__value:hover { color: var(--mocha); }
   font-family: var(--serif);
   font-size:clamp(calc(1.32rem + 1px), 2.22vw, calc(1.8rem + 1px));
   color: var(--navy);
-  margin-bottom: 8px;
+  margin-bottom: 20px;
   line-height: 1.2;
   text-align: left;
   letter-spacing: .03em;
@@ -1739,18 +1739,13 @@ a.kontakt-list__value:hover { color: var(--mocha); }
 }
 .krio-hero__title-sub {
   display: block;
-  margin: 0 0 20px;
-  font-family: var(--serif);
-  font-size: clamp(calc(1.05rem + 1px), 1.8vw, calc(1.35rem + 1px));
+  margin-top: 0.42em;
   font-weight: 500;
   font-style: italic;
-  line-height: 1.35;
   letter-spacing: .02em;
   color: var(--brown);
   opacity: 1;
   white-space: normal;
-  text-align: left;
-  overflow-wrap: break-word;
 }
 .krio-hero__lead {
   font-size:calc(1.11rem + 1px);
@@ -2240,7 +2235,7 @@ a.kontakt-list__value:hover { color: var(--mocha); }
     max-width: 100%;
   }
   .krio-hero__title-sub {
-    margin: 0 0 20px;
+    margin-top: 0.55em;
     white-space: normal;
   }
   .krio-hero--split .krio-hero__content .btn {

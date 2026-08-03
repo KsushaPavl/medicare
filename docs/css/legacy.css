@@ -70,7 +70,7 @@
   font-size: 22px;
   font-weight: 600;
   color: var(--brown);
-  text-align: center;
+  text-align: left;
   line-height: 1.4;
   margin: 0 0 14px;
   letter-spacing: .01em;
@@ -83,6 +83,7 @@
     line-height: 1.25;
     margin-bottom: 28px;
     letter-spacing: normal;
+    text-align: center;
   }
 }
 .o-nas-content__body {

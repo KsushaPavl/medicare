@@ -2189,7 +2189,7 @@ a.kontakt-list__value:hover { color: var(--mocha); }
   .krio-hero--split {
     grid-template-columns: 1fr;
     gap: 20px;
-    padding: 40px 12px 0;
+    padding: 40px 16px 0;
     min-height: 0;
     width: 100%;
     max-width: 100%;
@@ -2204,7 +2204,7 @@ a.kontakt-list__value:hover { color: var(--mocha); }
     margin-right: 0;
   }
   .krio-hero--split + .krio-section {
-    padding-top: 28px;
+    padding-top: 36px;
   }
   .krio-hero--title-top .krio-hero__title,
   .krio-hero--title-top .krio-hero__content,
@@ -2234,25 +2234,31 @@ a.kontakt-list__value:hover { color: var(--mocha); }
     padding-inline: 0;
     max-width: 100%;
   }
-  .krio-hero__title-sub {
-    margin-top: 0;
-    line-height: 1.25;
-    white-space: normal;
-  }
   .krio-hero__title {
-    line-height: 1.25;
+    line-height: 1.3;
     width: 100%;
     max-width: 100%;
     letter-spacing: .01em;
+    margin-bottom: 18px;
     overflow-wrap: break-word;
-    word-break: normal;
     box-sizing: border-box;
   }
-  .krio-hero--split .krio-hero__title,
-  .krio-hero--split .krio-hero__title-sub,
+  .krio-hero__title-sub {
+    margin-top: 0.35em;
+    line-height: 1.3;
+    white-space: normal;
+  }
   .krio-hero--split .krio-hero__lead {
-    width: 100%;
-    max-width: 100%;
+    margin-bottom: 28px;
+  }
+  .krio-heading {
+    margin-bottom: 28px;
+  }
+  .krio-heading--center {
+    margin-bottom: 28px;
+  }
+  .krio-tech-header {
+    margin-bottom: 36px;
   }
   .krio-tech-header--center {
     max-width: none;
@@ -2265,12 +2271,7 @@ a.kontakt-list__value:hover { color: var(--mocha); }
   }
   .krio-section--stone,
   .krio-tech-section {
-    padding-inline: 0;
-  }
-  .krio-section__inner,
-  .krio-section__inner--wide,
-  .krio-section__inner--narrow {
-    padding-inline: 12px;
+    padding-inline: 16px;
   }
   .krio-hero--split .krio-hero__content .btn {
     display: flex;
@@ -2289,10 +2290,10 @@ a.kontakt-list__value:hover { color: var(--mocha); }
   .krio-hero--split .krio-hero__photo {
     order: 1;
     min-height: 0;
-    width: calc(100% + 24px);
+    width: calc(100% + 32px);
     max-width: none;
-    margin-left: -12px;
-    margin-right: -12px;
+    margin-left: -16px;
+    margin-right: -16px;
     overflow: hidden;
     justify-content: center;
   }
@@ -2581,7 +2582,7 @@ a.kontakt-list__value:hover { color: var(--mocha); }
   .krio-section__inner,
   .krio-section__inner--wide,
   .krio-section__inner--narrow {
-    padding-inline: 12px;
+    padding-inline: 16px;
   }
 }
 
@@ -2669,8 +2670,8 @@ a.kontakt-list__value:hover { color: var(--mocha); }
     padding: 20px;
   }
   .krio-hero--split {
-    padding: 32px 12px 0;
-    gap: 16px;
+    padding: 32px 16px 0;
+    gap: 20px;
   }
   .krio-page .krio-hero.krio-hero--split {
     margin-bottom: 0;
@@ -2680,17 +2681,17 @@ a.kontakt-list__value:hover { color: var(--mocha); }
     margin-right: 0;
   }
   .krio-hero--split + .krio-section {
-    padding-top: 24px;
+    padding-top: 32px;
   }
   .krio-section__inner,
   .krio-section__inner--wide,
   .krio-section__inner--narrow {
-    padding-inline: 12px;
+    padding-inline: 16px;
   }
   .krio-hero--split .krio-hero__photo {
-    width: calc(100% + 24px);
-    margin-left: -12px;
-    margin-right: -12px;
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    margin-right: -16px;
     margin-bottom: 0;
     min-height: 0;
     height: auto;
@@ -2705,13 +2706,14 @@ a.kontakt-list__value:hover { color: var(--mocha); }
     min-height: 220px;
   }
   .krio-section--stone {
-    padding-inline: 0;
+    padding-inline: 16px;
   }
   .krio-tech-section {
-    padding-inline: 0;
+    padding-inline: 16px;
   }
   .krio-heading {
     font-size: clamp(calc(1.4rem + 1px), 5.5vw, calc(1.85rem + 1px));
+    margin-bottom: 24px;
   }
   .kontakt-page {
     padding-block: 32px 40px;

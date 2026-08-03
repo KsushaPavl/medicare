@@ -2194,11 +2194,19 @@ a.kontakt-list__value:hover { color: var(--mocha); }
   .krio-hero--split {
     grid-template-columns: 1fr;
     gap: 20px;
-    padding: 40px var(--content-pad) 0;
+    padding: 40px 20px 0;
     min-height: 0;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
   .krio-page .krio-hero.krio-hero--split {
     margin-bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
   .krio-hero--split + .krio-section {
     padding-top: 28px;
@@ -2217,10 +2225,20 @@ a.kontakt-list__value:hover { color: var(--mocha); }
     padding: 0;
     align-self: auto;
     justify-self: stretch;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
   }
   .krio-hero__title,
+  .krio-hero__title-sub,
   .krio-hero__lead,
-  .krio-hero__caption { text-align: left; }
+  .krio-hero__caption {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    padding-inline: 0;
+    max-width: 100%;
+  }
   .krio-hero__title-sub {
     margin: 0 0 20px;
     white-space: normal;
@@ -2242,10 +2260,10 @@ a.kontakt-list__value:hover { color: var(--mocha); }
   .krio-hero--split .krio-hero__photo {
     order: 1;
     min-height: 0;
-    width: calc(100% + 2 * var(--content-pad));
+    width: calc(100% + 40px);
     max-width: none;
-    margin-left: calc(-1 * var(--content-pad));
-    margin-right: calc(-1 * var(--content-pad));
+    margin-left: -20px;
+    margin-right: -20px;
     overflow: hidden;
     justify-content: center;
   }
@@ -2627,14 +2645,23 @@ a.kontakt-list__value:hover { color: var(--mocha); }
   }
   .krio-page .krio-hero.krio-hero--split {
     margin-bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
   .krio-hero--split + .krio-section {
     padding-top: 24px;
   }
+  .krio-section__inner,
+  .krio-section__inner--wide,
+  .krio-section__inner--narrow {
+    padding-inline: 16px;
+  }
   .krio-hero--split .krio-hero__photo {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    margin-right: -16px;
     margin-bottom: 0;
     min-height: 0;
     height: auto;

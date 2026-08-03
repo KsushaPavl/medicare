@@ -2241,6 +2241,18 @@ a.kontakt-list__value:hover { color: var(--mocha); }
   }
   .krio-hero__title {
     line-height: 1.25;
+    width: 100%;
+    max-width: 100%;
+    letter-spacing: .01em;
+    overflow-wrap: break-word;
+    word-break: normal;
+    box-sizing: border-box;
+  }
+  .krio-hero--split .krio-hero__title,
+  .krio-hero--split .krio-hero__title-sub,
+  .krio-hero--split .krio-hero__lead {
+    width: 100%;
+    max-width: 100%;
   }
   .krio-tech-header--center {
     max-width: none;
@@ -2728,7 +2740,6 @@ a.kontakt-list__value:hover { color: var(--mocha); }
     line-height: 1.4 !important;
     margin-bottom: 14px !important;
     white-space: normal !important;
-    text-align: left !important;
   }
 }
 

@@ -2756,6 +2756,12 @@ a.kontakt-list__value:hover { color: var(--mocha); }
   display: flex;
   flex-direction: column;
   gap: clamp(36px, 5vw, 56px);
+  max-width: 100%;
+  min-width: 0;
+}
+.cennik-block {
+  max-width: 100%;
+  min-width: 0;
 }
 .cennik-block__title {
   font-family: var(--serif);
@@ -2775,8 +2781,13 @@ a.kontakt-list__value:hover { color: var(--mocha); }
   color: var(--mocha);
 }
 .cennik-table-wrap {
+  display: block;
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   overflow-x: auto;
+  overscroll-behavior-x: contain;
   -webkit-overflow-scrolling: touch;
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -2784,8 +2795,9 @@ a.kontakt-list__value:hover { color: var(--mocha); }
 }
 .cennik-table {
   width: 100%;
+  max-width: 100%;
   border-collapse: collapse;
-  min-width: 280px;
+  table-layout: fixed;
 }
 .cennik-table th,
 .cennik-table td {
@@ -2804,11 +2816,18 @@ a.kontakt-list__value:hover { color: var(--mocha); }
   text-transform: uppercase;
   border-bottom: 1px solid var(--border);
 }
+.cennik-table thead th:first-child,
+.cennik-table tbody td:first-child {
+  width: auto;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
 .cennik-table thead th:last-child,
 .cennik-table tbody td:last-child {
   text-align: right;
   white-space: nowrap;
-  width: 1%;
+  width: 5.5em;
   font-weight: 700;
   color: var(--brown);
 }
@@ -2837,8 +2856,12 @@ a.kontakt-list__value:hover { color: var(--mocha); }
 @media (max-width: 600px) {
   .cennik-table th,
   .cennik-table td {
-    padding: 12px 14px;
-    font-size: 0.96rem;
+    padding: 14px 10px;
+  }
+  .cennik-table thead th:last-child,
+  .cennik-table tbody td:last-child {
+    width: 4.75em;
+    padding-inline: 10px 12px;
   }
 }
 /* Doctor avatar initials */

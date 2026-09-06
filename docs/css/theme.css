@@ -2789,10 +2789,10 @@ a.kontakt-list__value:hover { color: var(--mocha); }
 }
 .cennik-table th,
 .cennik-table td {
-  padding: 14px 18px;
+  padding: 16px 18px;
   text-align: left;
   vertical-align: top;
-  font-size: 1.01rem;
+  font-size: 1.1rem;
   line-height: 1.55;
 }
 .cennik-table thead th {

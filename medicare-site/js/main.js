@@ -216,19 +216,43 @@ function initTestimonials() {
             stars: 5,
             text: 'Pani doktor niesamowicie delikatna, ciepła i przystępna osoba. Wszystko wyjaśnia bez pośpiechu.',
             name: 'Anna',
+            initial: 'A',
             sourceMeta: 'lek. Eliza Słodka · 3 września 2026'
         },
         {
             stars: 5,
             text: 'Polecam Panią doktor z całego serca. Kompetentna, szczegółowo odpowiada na wszystkie pytania. Do tego jest przemiłym człowiekiem.',
             name: 'Beata',
+            initial: 'B',
             sourceMeta: 'dr n. med. Paulina Zarębska-Karpieszuk · 31 sierpnia 2026'
         },
         {
             stars: 5,
             text: 'Bardzo polecam! Profesjonalny, empatyczny i zaangażowany lekarz. Wszystko dokładnie wyjaśnia, poświęca pacjentowi dużo uwagi i wzbudza ogromne zaufanie. Jestem bardzo zadowolona z wizyty!',
             name: 'Olga',
+            initial: 'O',
             sourceMeta: 'dr n. med. Piotr Kluska · 27 sierpnia 2026'
+        },
+        {
+            stars: 5,
+            text: 'Lekarz kompetentny rzeczowy zna fach dobre podejście do pacjenta takich nam potrzeba polecam. Pozdrawiam',
+            name: 'Andrzej',
+            initial: 'A',
+            sourceMeta: 'lek. Mikołaj Ostrach · 28 sierpnia 2026'
+        },
+        {
+            stars: 5,
+            text: 'Wizyta odbyła się punktualnie, dobry specjalista, zdecydowanie polecam',
+            name: 'J.D',
+            initial: 'J',
+            sourceMeta: 'dr n. med. Piotr Kluska · 28 sierpnia 2026'
+        },
+        {
+            stars: 5,
+            text: 'Serdecznie polecam Panią Doktor. Pani Doktor to niezwykle kompetentna osoba, która nie spieszy się, szczegółowo analizuje problem i słucha pacjenta z pełną empatią. Wizyta przebiegła w bezstresowej, przyjaznej atmosferze.',
+            name: 'Dawid K',
+            initial: 'D',
+            sourceMeta: 'lek. Eliza Słodka · 2 września 2026'
         }
     ];
     const grid = document.getElementById('testGrid');
@@ -244,19 +268,15 @@ function initTestimonials() {
         return;
     }
 
-    function displayName(name) {
-        return name + ' ' + name.charAt(0).toUpperCase() + '.';
-    }
-
     function cardHtml(r) {
-        const initial = r.name.charAt(0).toUpperCase();
+        const initial = r.initial || r.name.charAt(0).toUpperCase();
         return '<article class="review-card">' +
             '<div class="review-card__stars">' + '★'.repeat(r.stars) + '</div>' +
             '<p class="review-card__text">' + r.text + '</p>' +
             '<div class="review-card__head">' +
             '<div class="review-card__avatar">' + initial + '</div>' +
             '<div class="review-card__meta">' +
-            '<div class="review-card__name">' + displayName(r.name) + '</div>' +
+            '<div class="review-card__name">' + r.name + '</div>' +
             '<div class="review-card__source">' + zlLink + ' · ' + r.sourceMeta + '</div>' +
             '</div></div>' +
             '</article>';

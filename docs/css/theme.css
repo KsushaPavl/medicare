@@ -3748,40 +3748,6 @@ body:not(.premium-page) .nav__mobile a.is-active {
   scroll-margin-top: calc(var(--nav-h) + 16px);
 }
 
-/* ── Page-end Umów wizytę CTA ── */
-.page-end-cta {
-  padding-block: clamp(48px, 7vw, 80px);
-  background: var(--stone);
-  border-top: 1px solid var(--border);
-  text-align: center;
-}
-.page-end-cta__wrap {
-  max-width: 560px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-}
-.page-end-cta__title {
-  font-family: var(--serif);
-  font-size: clamp(1.5rem, 2.8vw, 2rem);
-  font-weight: 600;
-  color: var(--navy);
-  margin: 0;
-  letter-spacing: .02em;
-}
-.page-end-cta__lead {
-  margin: 0;
-  font-size: 1.05rem;
-  line-height: 1.65;
-  color: var(--muted);
-  max-width: 32em;
-}
-.page-end-cta__btn {
-  margin-top: 8px;
-}
-
-
 /* ── Back to top ── */
 .back-to-top {
   position: fixed;

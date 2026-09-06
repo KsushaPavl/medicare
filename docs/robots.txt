@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://medicare-radom.pl/sitemap.xml

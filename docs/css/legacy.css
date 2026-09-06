@@ -90,6 +90,14 @@
   line-height: 1.75;
   color: var(--muted);
 }
+.o-nas-content__body a {
+  color: var(--brown);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.o-nas-content__body a:hover {
+  color: var(--navy);
+}
 @media (min-width: 768px) {
   .o-nas-content__body { font-size:calc(1.185rem + 1px); }
 }

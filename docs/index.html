@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XGWP2CE8HC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XGWP2CE8HC');
-</script>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Przychodnia MediCare Radom – lekarze specjaliści, USG, RTG</title>
@@ -17,37 +8,79 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link href="css/theme.css?v=227" rel="stylesheet">
-  <link href="css/legacy.css?v=61" rel="stylesheet">
+  <link href="css/theme.css?v=257" rel="stylesheet">
+  <link href="css/legacy.css?v=62" rel="stylesheet">
   <link href="dist/output.css?v=36" rel="stylesheet">
   <script>document.documentElement.classList.add('js');</script>
-  <script type="application/ld+json">
+
+
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "MedicalClinic",
-  "name": "Przychodnia MediCare Radom",
-  "url": "https://medicare-radom.pl",
+  "@id": "https://medicare-radom.pl/#clinic",
+  "name": "Przychodnia MediCare",
+  "description": "Wielospecjalistyczna przychodnia w Radomiu. Kardiolog, chirurg, neurolog, USG, RTG i Holter EKG.",
+  "url": "https://medicare-radom.pl/",
+  "logo": "https://medicare-radom.pl/assets/logo.png",
+  "image": "https://medicare-radom.pl/assets/building.jpg",
   "telephone": "+48889834936",
-  "image": "https://medicare-radom.pl/assets/logo.png",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "ul. Dębowa 2",
-    "postalCode": "26-610",
     "addressLocality": "Radom",
+    "postalCode": "26-610",
     "addressCountry": "PL"
   },
-  "openingHoursSpecification": {
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.3970839,
+    "longitude": 21.1353775
+  },
+  "openingHoursSpecification": [{
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
     "opens": "08:00",
     "closes": "18:00"
-  },
+  }],
   "sameAs": [
     "https://www.facebook.com/profile.php?id=61579875898421",
-    "https://www.instagram.com/przychodnia_medicare"
-  ]
+    "https://www.instagram.com/przychodnia_medicare/",
+    "https://www.znanylekarz.pl/placowki/przychodnia-medicare-3"
+  ],
+  "medicalSpecialty": [
+    "Cardiovascular",
+    "Otolaryngologic",
+    "Urologic",
+    "Renal",
+    "Neurologic",
+    "Rheumatologic",
+    "Psychiatric",
+    "Surgical",
+    "PlasticSurgery",
+    "Radiography"
+  ],
+  "availableService": [
+    { "@type": "MedicalTest", "name": "USG" },
+    { "@type": "MedicalTest", "name": "RTG" },
+    { "@type": "MedicalTest", "name": "Holter EKG" }
+  ],
+  "isAcceptingNewPatients": true,
+  "hasMap": "https://maps.google.com/?q=ul.+D%C4%99bowa+2,+26-610+Radom"
 }
-  </script>
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://medicare-radom.pl/#website",
+  "name": "Przychodnia MediCare",
+  "url": "https://medicare-radom.pl/",
+  "inLanguage": "pl-PL",
+  "publisher": { "@id": "https://medicare-radom.pl/#clinic" }
+}
+</script>
 </head>
 <body class="home-page">
 <header id="site-header">
@@ -127,7 +160,7 @@
             </div>
             <div class="feature-card__body">
               <h3 class="feature-card__title">Ponad 10 specjalizacji</h3>
-              <p class="feature-card__text">Laryngologia, kardiologia, urologia, neurologia, psychiatria i chirurgia w jednym budynku. Dzięki wsp&oacute;łpracy z OrthoCare — także ortopedia i traumatologia narządu ruchu.</p>
+              <p class="feature-card__text"><a href="poradnie.html">Laryngologia, kardiologia, urologia, neurologia, psychiatria i chirurgia</a> w jednym budynku &mdash; w tym <a href="blefaroplastyka.html">blefaroplastyka</a>. Dzięki wsp&oacute;łpracy z OrthoCare — także ortopedia i traumatologia narządu ruchu.</p>
             </div>
           </article>
           <article class="feature-card">
@@ -145,7 +178,7 @@
           <button type="button" class="slider-btn" data-cards-next aria-label="Następna karta">&#8594;</button>
         </div>
       </div>
-    </div>
+</div>
   </section>
 
   <section class="reviews-section section home-section home-section--white" id="opinie" data-reveal>
@@ -156,10 +189,20 @@
         <button type="button" class="slider-btn" id="tPrev" aria-label="Poprzednia opinia">&#8592;</button>
         <button type="button" class="slider-btn" id="tNext" aria-label="Następna opinia">&#8594;</button>
       </div>
-    </div>
+      <p class="reviews-note"><a href="https://www.znanylekarz.pl/placowki/przychodnia-medicare-3" rel="nofollow noopener" target="_blank">Zobacz opinie pacjentów na ZnanyLekarz</a></p>
+</div>
   </section>
 
 </main>
+
+
+<section class="page-end-cta" id="umow-wizyte">
+  <div class="wrap page-end-cta__wrap">
+    <h2 class="page-end-cta__title">Um&oacute;w wizytę</h2>
+    <p class="page-end-cta__lead">Wybierz dogodny termin online &mdash; rejestracja pn&ndash;pt 8:00&ndash;18:00.</p>
+    <button type="button" class="btn btn--primary umow-wizyte-btn page-end-cta__btn">Um&oacute;w wizytę</button>
+  </div>
+</section>
 
 <footer class="footer-dark">
   <div class="footer-dark__top">
@@ -219,7 +262,7 @@
 </div>
 
 <script>!function($_x,_s,id){var js,fjs=$_x.getElementsByTagName(_s)[0];if(!$_x.getElementById(id)){js=$_x.createElement(_s);js.id=id;js.src="//platform.docplanner.com/js/widget.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","zl-widget-s");</script>
-<script src="js/main.js?v=132" defer></script>
+<script src="js/main.js?v=143" defer></script>
 
 </body>
 </html>

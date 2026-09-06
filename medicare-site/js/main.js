@@ -208,13 +208,28 @@ document.addEventListener('DOMContentLoaded', handleExpandChips);
 
 // Testimonials grid (reference design)
 function initTestimonials() {
+    const zlHref = 'https://www.znanylekarz.pl/placowki/przychodnia-medicare-3';
+    const zlLink =
+        '<a href="' + zlHref + '" rel="nofollow noopener" target="_blank">Opinia z ZnanyLekarz</a>';
     const reviews = [
-        { stars: 5, text: 'Wreszcie miejsce, gdzie wszystkie badania mam w jednym punkcie. USG zrobione od razu na wizycie, a lekarz spokojnie wszystko wytłumaczył. Bez kolejek i bez pośpiechu.', name: 'Katarzyna', source: 'Google' },
-        { stars: 5, text: 'Poradnia Leczenia Ran to prawdziwi eksperci. Po latach zmagań z owrzodzeniem wreszcie widzę efekty. Ogromne zaangażowanie całego zespołu.', name: 'Marek', source: 'Google' },
-        { stars: 5, text: 'Nowoczesny budynek, komfortowe gabinety i pełen profesjonalizm. Zabieg blefaroplastyki przebiegł bezboleśnie, a efekt naturalny. Serdecznie polecam!', name: 'Anna', source: 'Google' },
-        { stars: 5, text: 'Bardzo miła rejestracja i krótki czas oczekiwania. Lekarz poświęcił mi mnóstwo czasu i dokładnie wszystko wyjaśnił. Polecam całym sercem.', name: 'Grażyna', source: 'Google' },
-        { stars: 5, text: 'Świetna organizacja, komplet specjalistów pod jednym dachem. Konsultacja u kardiologa z badaniem ECHO od ręki. Profesjonalizm na najwyższym poziomie.', name: 'Robert', source: 'Google' },
-        { stars: 5, text: 'Duży parking, gabinety na parterze, wszystko dostępne bez barier. Podejście do pacjenta pełne empatii. Będę wracać i polecać znajomym.', name: 'Elżbieta', source: 'Google' },
+        {
+            stars: 5,
+            text: 'Pani doktor niesamowicie delikatna, ciepła i przystępna osoba. Wszystko wyjaśnia bez pośpiechu.',
+            name: 'Anna',
+            sourceMeta: 'lek. Eliza Słodka · 3 września 2026'
+        },
+        {
+            stars: 5,
+            text: 'Polecam Panią doktor z całego serca. Kompetentna, szczegółowo odpowiada na wszystkie pytania. Do tego jest przemiłym człowiekiem.',
+            name: 'Beata',
+            sourceMeta: 'dr n. med. Paulina Zarębska-Karpieszuk · 31 sierpnia 2026'
+        },
+        {
+            stars: 5,
+            text: 'Bardzo polecam! Profesjonalny, empatyczny i zaangażowany lekarz. Wszystko dokładnie wyjaśnia, poświęca pacjentowi dużo uwagi i wzbudza ogromne zaufanie. Jestem bardzo zadowolona z wizyty!',
+            name: 'Olga',
+            sourceMeta: 'dr n. med. Piotr Kluska · 27 sierpnia 2026'
+        }
     ];
     const grid = document.getElementById('testGrid');
     const section = document.getElementById('opinie');
@@ -242,7 +257,7 @@ function initTestimonials() {
             '<div class="review-card__avatar">' + initial + '</div>' +
             '<div class="review-card__meta">' +
             '<div class="review-card__name">' + displayName(r.name) + '</div>' +
-            '<div class="review-card__source">Opinia Google</div>' +
+            '<div class="review-card__source">' + zlLink + ' · ' + r.sourceMeta + '</div>' +
             '</div></div>' +
             '</article>';
     }
@@ -877,7 +892,59 @@ function initAnchorNav() {
 window.initAnchorNav = initAnchorNav;
 
 function scrollToHashOnLoad() {
-    /* no-op on multi-page site */
+    var hash = window.location.hash;
+    if (!hash || hash.length < 2) {
+        return;
+    }
+    var el = document.getElementById(hash.slice(1));
+    if (!el) {
+        return;
+    }
+    window.setTimeout(function () {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 80);
+}
+
+function initBackToTop() {
+    var btn = document.getElementById('backToTop');
+    if (!btn) {
+        btn = document.createElement('button');
+        btn.type = 'button';
+        btn.id = 'backToTop';
+        btn.className = 'back-to-top';
+        btn.setAttribute('aria-label', 'Wróć na górę');
+        btn.innerHTML =
+            '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
+        document.body.appendChild(btn);
+    }
+
+    var threshold = 420;
+    var ticking = false;
+
+    function update() {
+        ticking = false;
+        if (window.scrollY > threshold) {
+            btn.classList.add('is-visible');
+        } else {
+            btn.classList.remove('is-visible');
+        }
+    }
+
+    window.addEventListener(
+        'scroll',
+        function () {
+            if (!ticking) {
+                ticking = true;
+                window.requestAnimationFrame(update);
+            }
+        },
+        { passive: true }
+    );
+    update();
+
+    btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 }
 
 // Gallery modal click-outside handler on home page
@@ -885,6 +952,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initAnchorNav();
     scrollToHashOnLoad();
     initGalleryLightbox();
+    initBackToTop();
 });
 
 // Re-init mobile menu after dynamic header load on doctor pages

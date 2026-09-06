@@ -763,6 +763,27 @@
   border-top: 1px solid var(--pm-border);
   padding-top: 18px;
 }
+.pm-faq__footer {
+  margin: 28px 0 0;
+  font-size: 1.01rem;
+  line-height: 1.7;
+  color: var(--pm-muted);
+  text-align: center;
+}
+.pm-text-link {
+  color: var(--pm-gold-light, #c9a96e);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.pm-text-link:hover {
+  color: #fff;
+}
+.pm-step__text .pm-text-link {
+  color: var(--pm-steel, #7697A1);
+}
+.pm-step__text .pm-text-link:hover {
+  color: var(--pm-deep, #1D343B);
+}
 
 /* CTA band */
 .pm-cta {

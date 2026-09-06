@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XGWP2CE8HC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XGWP2CE8HC');
-</script>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Poradnie specjalistyczne w Radomiu – MediCare</title>
@@ -17,9 +8,124 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link href="css/theme.css?v=227" rel="stylesheet">
+  <link href="css/theme.css?v=257" rel="stylesheet">
   <link href="css/legacy.css?v=61" rel="stylesheet">
   <link href="dist/output.css?v=33" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "@id": "https://medicare-radom.pl/#clinic",
+  "name": "Przychodnia MediCare",
+  "description": "Wielospecjalistyczna przychodnia w Radomiu. Kardiolog, chirurg, neurolog, USG, RTG i Holter EKG.",
+  "url": "https://medicare-radom.pl/",
+  "logo": "https://medicare-radom.pl/assets/logo.png",
+  "image": "https://medicare-radom.pl/assets/building.jpg",
+  "telephone": "+48889834936",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ul. Dębowa 2",
+    "addressLocality": "Radom",
+    "postalCode": "26-610",
+    "addressCountry": "PL"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.3970839,
+    "longitude": 21.1353775
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "08:00",
+    "closes": "18:00"
+  }],
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61579875898421",
+    "https://www.instagram.com/przychodnia_medicare/",
+    "https://www.znanylekarz.pl/placowki/przychodnia-medicare-3"
+  ],
+  "medicalSpecialty": [
+    "Cardiovascular",
+    "Otolaryngologic",
+    "Urologic",
+    "Renal",
+    "Neurologic",
+    "Rheumatologic",
+    "Psychiatric",
+    "Surgical",
+    "PlasticSurgery",
+    "Radiography"
+  ],
+  "availableService": [
+    { "@type": "MedicalTest", "name": "USG" },
+    { "@type": "MedicalTest", "name": "RTG" },
+    { "@type": "MedicalTest", "name": "Holter EKG" }
+  ],
+  "isAcceptingNewPatients": true,
+  "hasMap": "https://maps.google.com/?q=ul.+D%C4%99bowa+2,+26-610+Radom"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://medicare-radom.pl/" },
+    { "@type": "ListItem", "position": 2, "name": "Poradnie", "item": "https://medicare-radom.pl/poradnie.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Poradnie – Przychodnia MediCare Radom",
+  "url": "https://medicare-radom.pl/poradnie.html",
+  "inLanguage": "pl-PL",
+  "about": { "@id": "https://medicare-radom.pl/#clinic" },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Poradnia Chirurgii Ogólnej i Proktologii" },
+      { "@type": "ListItem", "position": 2, "name": "Poradnia Leczenia Ran" },
+      { "@type": "ListItem", "position": 3, "name": "Poradnia Zdrowia Psychicznego" },
+      { "@type": "ListItem", "position": 4, "name": "Poradnia Chirurgii Plastycznej" },
+      { "@type": "ListItem", "position": 5, "name": "Poradnia Kardiologiczna" },
+      { "@type": "ListItem", "position": 6, "name": "Poradnia Chirurgii Naczyniowej" },
+      { "@type": "ListItem", "position": 7, "name": "Poradnia Urologiczna" },
+      { "@type": "ListItem", "position": 8, "name": "Poradnia Nefrologiczna" },
+      { "@type": "ListItem", "position": 9, "name": "Poradnia Neurologiczna" },
+      { "@type": "ListItem", "position": 10, "name": "Poradnia Reumatologiczna" },
+      { "@type": "ListItem", "position": 11, "name": "Poradnia Otolaryngologiczna" },
+      { "@type": "ListItem", "position": 12, "name": "Poradnia Chorób Wewnętrznych" }
+    ]
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "Person", "name": "Piotr Kluska", "honorificPrefix": "dr n. med.", "jobTitle": "Specjalista chirurgii ogólnej, proktolog", "worksFor": { "@id": "https://medicare-radom.pl/#clinic" } },
+    { "@type": "Person", "name": "Paulina Szymańska", "honorificPrefix": "dr n. o zdr.", "jobTitle": "Specjalista leczenia ran", "worksFor": { "@id": "https://medicare-radom.pl/#clinic" } },
+    { "@type": "Person", "name": "Tomasz Golański", "honorificPrefix": "lek.", "jobTitle": "Specjalista psychiatrii", "worksFor": { "@id": "https://medicare-radom.pl/#clinic" } },
+    { "@type": "Person", "name": "Raman Paulouski", "honorificPrefix": "lek.", "jobTitle": "Chirurg", "worksFor": { "@id": "https://medicare-radom.pl/#clinic" } },
+    { "@type": "Person", "name": "Eliza Słodka", "honorificPrefix": "lek.", "jobTitle": "Specjalista kardiologii, specjalista chorób wewnętrznych", "worksFor": { "@id": "https://medicare-radom.pl/#clinic" } },
+    { "@type": "Person", "name": "Robert Kapołka", "honorificPrefix": "lek.", "jobTitle": "Specjalista chirurgii naczyniowej", "worksFor": { "@id": "https://medicare-radom.pl/#clinic" } },
+    { "@type": "Person", "name": "Mikołaj Ostrach", "honorificPrefix": "lek.", "jobTitle": "Specjalista urologii", "worksFor": { "@id": "https://medicare-radom.pl/#clinic" } },
+    { "@type": "Person", "name": "Łukasz Skórka", "honorificPrefix": "lek.", "jobTitle": "Specjalista nefrologii, specjalista chorób wewnętrznych", "worksFor": { "@id": "https://medicare-radom.pl/#clinic" } },
+    { "@type": "Person", "name": "Anna Narożnik", "honorificPrefix": "lek.", "jobTitle": "Specjalista neurologii", "worksFor": { "@id": "https://medicare-radom.pl/#clinic" } },
+    { "@type": "Person", "name": "Agata Skwarek-Szewczyk", "honorificPrefix": "lek.", "jobTitle": "Specjalista reumatologii, specjalista chorób wewnętrznych", "worksFor": { "@id": "https://medicare-radom.pl/#clinic" } },
+    { "@type": "Person", "name": "Paulina Zarębska-Karpieszuk", "honorificPrefix": "dr n. med.", "jobTitle": "Specjalista otolaryngologii", "worksFor": { "@id": "https://medicare-radom.pl/#clinic" } },
+    { "@type": "Person", "name": "Wojciech Rogozik", "honorificPrefix": "lek.", "jobTitle": "Specjalista otolaryngologii", "worksFor": { "@id": "https://medicare-radom.pl/#clinic" } }
+  ]
+}
+</script>
 </head>
 <body>
 <header id="site-header">
@@ -81,12 +187,12 @@
               <div><p class="poradnia-doc__name">Dr n. med. Piotr Kluska</p><p class="poradnia-doc__spec">specjalista chirurgii og&oacute;lnej, proktolog</p></div>
             </div>
           </div>
-        </div>
+</div>
       </article>
 
       <article class="poradnia-card" id="leczenie-ran">
         <div class="poradnia-card__body">
-          <h2 class="poradnia-card__title">Poradnia Leczenia Ran</h2>
+          <h2 class="poradnia-card__title"><a href="poradnia-leczenia-ran.html">Poradnia Leczenia Ran</a></h2>
           <p class="poradnia-card__text">Dedykowane terapie dla pacjent&oacute;w z ranami przewlekłymi, owrzodzeniami podudzi czy zespołem stopy cukrzycowej. Stosujemy nowoczesne opatrunki, sprzęty i procedury przyspieszające gojenie.</p>
           <div class="poradnia-card__doctors">
             <div class="poradnia-doc">
@@ -94,7 +200,7 @@
               <div><p class="poradnia-doc__name">Dr n. o zdr. Paulina Szymańska</p><p class="poradnia-doc__spec">specjalista leczenia ran</p></div>
             </div>
           </div>
-        </div>
+</div>
       </article>
 
       <article class="poradnia-card" id="psychiatria">
@@ -107,20 +213,20 @@
               <div><p class="poradnia-doc__name">Lek. Tomasz Golański</p><p class="poradnia-doc__spec">specjalista psychiatrii</p></div>
             </div>
           </div>
-        </div>
+</div>
       </article>
 
-      <article class="poradnia-card">
+      <article class="poradnia-card" id="blefaroplastyka">
         <div class="poradnia-card__body">
-          <h2 class="poradnia-card__title">Poradnia Chirurgii Plastycznej (Blefaroplastyka)</h2>
-          <p class="poradnia-card__text">Chirurgiczna plastyka powiek w znieczuleniu miejscowym. Zabieg usuwa nadmiar sk&oacute;ry, poprawiając pole widzenia i przywracając twarzy młody wygląd.</p>
+          <h2 class="poradnia-card__title">Poradnia Chirurgii Plastycznej (<a href="blefaroplastyka.html">Blefaroplastyka</a>)</h2>
+          <p class="poradnia-card__text">Chirurgiczna <a href="blefaroplastyka.html">plastyka powiek</a> w znieczuleniu miejscowym. Zabieg usuwa nadmiar sk&oacute;ry, poprawiając pole widzenia i przywracając twarzy młody wygląd. <a href="blefaroplastyka.html">Dowiedz się więcej o blefaroplastyce</a>.</p>
           <div class="poradnia-card__doctors">
             <div class="poradnia-doc">
               <div class="doc-avatar poradnia-doc__avatar">RP</div>
               <div><p class="poradnia-doc__name">Lek. Raman Paulouski</p><p class="poradnia-doc__spec">chirurg</p></div>
             </div>
           </div>
-        </div>
+</div>
       </article>
 
       <article class="poradnia-card" id="kardiologia">
@@ -133,7 +239,7 @@
               <div><p class="poradnia-doc__name">Lek. Eliza Słodka</p><p class="poradnia-doc__spec">specjalista kardiologii, specjalista chor&oacute;b wewnętrznych</p></div>
             </div>
           </div>
-        </div>
+</div>
       </article>
 
       <article class="poradnia-card">
@@ -146,7 +252,7 @@
               <div><p class="poradnia-doc__name">Lek. Robert Kapołka</p><p class="poradnia-doc__spec">specjalista chirurgii naczyniowej</p></div>
             </div>
           </div>
-        </div>
+</div>
       </article>
 
       <article class="poradnia-card" id="urologia">
@@ -159,7 +265,7 @@
               <div><p class="poradnia-doc__name">Lek. Mikołaj Ostrach</p><p class="poradnia-doc__spec">specjalista urologii</p></div>
             </div>
           </div>
-        </div>
+</div>
       </article>
 
       <article class="poradnia-card">
@@ -172,7 +278,7 @@
               <div><p class="poradnia-doc__name">Lek. Łukasz Sk&oacute;rka</p><p class="poradnia-doc__spec">specjalista nefrologii, specjalista chor&oacute;b wewnętrznych</p></div>
             </div>
           </div>
-        </div>
+</div>
       </article>
 
       <article class="poradnia-card" id="neurologia">
@@ -185,7 +291,7 @@
               <div><p class="poradnia-doc__name">Lek. Anna Narożnik</p><p class="poradnia-doc__spec">specjalista neurologii</p></div>
             </div>
           </div>
-        </div>
+</div>
       </article>
 
       <article class="poradnia-card">
@@ -198,7 +304,7 @@
               <div><p class="poradnia-doc__name">Lek. Agata Skwarek-Szewczyk</p><p class="poradnia-doc__spec">specjalista reumatologii, specjalista chor&oacute;b wewnętrznych</p></div>
             </div>
           </div>
-        </div>
+</div>
       </article>
 
       <article class="poradnia-card" id="laryngologia">
@@ -215,7 +321,7 @@
               <div><p class="poradnia-doc__name">Lek. Wojciech Rogozik</p><p class="poradnia-doc__spec">specjalista otolaryngologii</p></div>
             </div>
           </div>
-        </div>
+</div>
       </article>
 
       <article class="poradnia-card">
@@ -236,13 +342,21 @@
               <div><p class="poradnia-doc__name">Lek. Eliza Słodka</p><p class="poradnia-doc__spec">specjalista kardiologii, specjalista chor&oacute;b wewnętrznych</p></div>
             </div>
           </div>
-        </div>
+</div>
       </article>
 
     </div>
   </div>
 </div>
 </main>
+
+<section class="page-end-cta" id="umow-wizyte">
+  <div class="wrap page-end-cta__wrap">
+    <h2 class="page-end-cta__title">Um&oacute;w wizytę</h2>
+    <p class="page-end-cta__lead">Wybierz dogodny termin online &mdash; rejestracja pn&ndash;pt 8:00&ndash;18:00.</p>
+    <button type="button" class="btn btn--primary umow-wizyte-btn page-end-cta__btn">Um&oacute;w wizytę</button>
+  </div>
+</section>
 
 <footer class="footer-dark">
   <div class="footer-dark__top">
@@ -295,6 +409,6 @@
 </div>
 
 <script>!function($_x,_s,id){var js,fjs=$_x.getElementsByTagName(_s)[0];if(!$_x.getElementById(id)){js=$_x.createElement(_s);js.id=id;js.src="//platform.docplanner.com/js/widget.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","zl-widget-s");</script>
-<script src="js/main.js?v=130" defer></script>
+<script src="js/main.js?v=142" defer></script>
 </body>
 </html>

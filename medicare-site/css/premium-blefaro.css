@@ -502,14 +502,12 @@
   overflow-x: auto;
   overflow-y: hidden;
   overscroll-behavior-x: contain;
-  overscroll-behavior-y: none;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   margin-bottom: clamp(20px, 3vw, 28px);
   align-items: stretch;
-  touch-action: pan-x;
 }
 .pm-results__grid::-webkit-scrollbar {
   display: none;

@@ -489,7 +489,7 @@ function initPmSlideshow() {
             window.setTimeout(function () {
                 current.classList.remove('is-leaving');
             }, 900);
-        }, 4500);
+        }, 3000);
     });
 }
 
@@ -516,12 +516,10 @@ function initPmResultsCarousel() {
         if (!items.length) {
             return 0;
         }
-        var mid = track.scrollLeft + track.clientWidth / 2;
         var best = 0;
         var bestDist = Infinity;
         for (var i = 0; i < items.length; i++) {
-            var center = items[i].offsetLeft + items[i].offsetWidth / 2;
-            var dist = Math.abs(center - mid);
+            var dist = Math.abs(items[i].offsetLeft - track.scrollLeft);
             if (dist < bestDist) {
                 bestDist = dist;
                 best = i;
@@ -536,9 +534,16 @@ function initPmResultsCarousel() {
         if (!item) {
             return;
         }
-        var left = item.offsetLeft - (track.clientWidth - item.clientWidth) / 2;
-        track.scrollTo({ left: left, behavior: 'smooth' });
+        // Align to start so desktop keeps 3 photos visible without vertical jump
+        var left = item.offsetLeft;
+        track.scrollTo({ left: left, top: 0, behavior: 'smooth' });
     }
+
+    track.addEventListener('scroll', function () {
+        if (track.scrollTop !== 0) {
+            track.scrollTop = 0;
+        }
+    }, { passive: true });
 
     if (prev) {
         prev.addEventListener('click', function () {

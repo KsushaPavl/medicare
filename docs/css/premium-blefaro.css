@@ -491,16 +491,31 @@
   margin-bottom: clamp(28px, 4vw, 40px);
   text-align: left;
 }
-.pm-results__grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(16px, 2.5vw, 28px);
-  margin-bottom: clamp(24px, 3vw, 32px);
+.pm-results__carousel {
+  width: 100%;
   max-width: var(--content-max, 72rem);
   margin-inline: auto;
 }
-.pm-results__controls {
+.pm-results__grid {
+  display: flex;
+  gap: clamp(16px, 2.5vw, 24px);
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  overscroll-behavior-y: none;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  margin-bottom: clamp(20px, 3vw, 28px);
+  align-items: stretch;
+  touch-action: pan-x;
+}
+.pm-results__grid::-webkit-scrollbar {
   display: none;
+}
+.pm-results__controls {
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
@@ -509,6 +524,9 @@
 .pm-results__frame {
   display: block;
   margin: 0;
+  flex: 0 0 calc((100% - 2 * clamp(16px, 2.5vw, 24px)) / 3);
+  width: calc((100% - 2 * clamp(16px, 2.5vw, 24px)) / 3);
+  max-width: none;
   aspect-ratio: 4 / 5;
   min-height: 0;
   background: var(--pm-paper);
@@ -516,6 +534,9 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 28px rgba(29, 52, 59, 0.1);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  transform: none;
 }
 .pm-results__frame img {
   width: 100%;
@@ -523,6 +544,7 @@
   object-fit: cover;
   object-position: center top;
   display: block;
+  transform: none;
 }
 .pm-results__frame span {
   font-family: var(--pm-sans);
@@ -1010,33 +1032,16 @@
     border-color: var(--pm-deep);
   }
   .pm-variants { grid-template-columns: 1fr; }
-  .pm-results__grid { grid-template-columns: 1fr; }
   .pm-results__controls {
     display: flex;
   }
   .pm-results__carousel {
     width: 100%;
   }
-  .pm-results__grid {
-    display: flex;
-    gap: 16px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    margin-bottom: 16px;
-    padding-inline: 4px;
-  }
-  .pm-results__grid::-webkit-scrollbar {
-    display: none;
-  }
   .pm-results__frame {
-    flex: 0 0 min(100%, 340px);
-    width: min(100%, 340px);
-    max-width: 340px;
+    flex: 0 0 min(100%, 320px);
+    width: min(100%, 320px);
     scroll-snap-align: center;
-    aspect-ratio: 4 / 5;
   }
   .pm-pricing { grid-template-columns: 1fr; max-width: 420px; margin-inline: auto; }
   .pm-price-card__title { min-height: auto; }

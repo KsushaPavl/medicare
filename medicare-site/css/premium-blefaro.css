@@ -455,6 +455,13 @@
   color: var(--pm-muted);
   margin: 0;
 }
+.pm-variant__more {
+  margin: 24px 0 0;
+  font-size: 0.98rem;
+}
+#wariant-laczony {
+  scroll-margin-top: calc(var(--nav-h, 72px) + 16px);
+}
 
 /* Photo strip (placeholders after variants) */
 .pm-photo-strip {
